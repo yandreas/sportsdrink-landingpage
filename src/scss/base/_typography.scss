@@ -1,0 +1,55 @@
+body {
+  font-family: 'Anta', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: $color-white;
+}
+
+.heading {
+  &__primary {
+    text-transform: uppercase;
+    font-size: 6rem;
+  }
+
+  &__secondary {
+    font-size: 2rem;
+  }
+
+  &__header {
+    font-size: 2rem;
+  }
+
+  &__scrollbar {
+    font-size: 2rem;
+    color: $color-black;
+    text-align: center;
+  }
+
+  &__description {
+    color: $color-black;
+  }
+
+  &__faq {
+    &--sub {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__accordion {
+    font-size: 2rem;
+
+    p {
+      letter-spacing: -0.1rem;
+    }
+  }
+
+  &__footer {
+    &-top {
+      font-size: 1rem;
+
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+}

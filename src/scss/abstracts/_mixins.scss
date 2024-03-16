@@ -1,0 +1,35 @@
+@mixin dot {
+  content: '';
+  display: inline-block;
+  padding: 0.3rem;
+  border-radius: 100px;
+  background-color: $color-secondary--light;
+}
+
+//Media queries
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == mini-phone {
+    @media (max-width: $breakpoint-mini-phone) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    @media (max-width: $breakpoint-phone) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-phone {
+    @media (max-width: $breakpoint-big-phone) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media (max-width: $breakpoint-tablet) {
+      @content;
+    }
+  }
+}

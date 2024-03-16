@@ -1,0 +1,33 @@
+.horizontal-scrollbar {
+  overflow: hidden;
+  background-color: $color-secondary--light;
+
+  &[data-animated='true'] &-inner {
+    min-width: 200%;
+    animation: scroll $scroller-duration linear infinite;
+  }
+
+  &-inner {
+    padding: 3rem 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    text-wrap: nowrap;
+    gap: 15rem;
+
+    li {
+      flex: 1 0 fit-content;
+      position: relative;
+      &::after {
+        content: '';
+        top: 50%;
+        left: -7.5rem;
+        transform: translate(-0.6rem, -0.6rem);
+        padding: 0.6rem;
+        background-color: $color-white;
+        border-radius: 100px;
+        position: absolute;
+      }
+    }
+  }
+}

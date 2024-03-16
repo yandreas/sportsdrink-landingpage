@@ -1,0 +1,70 @@
+.footer {
+  background-color: $color-primary--header;
+  filter: $shadow-footer;
+  height: 10rem;
+
+  &__top {
+    height: 75%;
+    display: flex;
+    align-items: center;
+
+    > div {
+      width: 50%;
+    }
+
+    &-nav {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      &-list {
+        list-style: none;
+        li:first-child {
+          margin-bottom: 2rem;
+        }
+      }
+
+      &-link {
+        &:link,
+        &:visited {
+          color: $color-white;
+          display: block;
+          text-decoration: none;
+        }
+        &:hover,
+        &:active {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      &::before {
+        @include dot;
+      }
+    }
+  }
+
+  &__bottom {
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: $color-grey;
+    }
+  }
+}

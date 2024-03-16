@@ -1,0 +1,201 @@
+.hero {
+  background-color: $color-primary;
+  height: 50rem;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+
+  &__textbox {
+    text-align: center;
+    padding: 10rem 30rem;
+    white-space: nowrap;
+  }
+}
+
+.products {
+  background-color: $color-primary;
+  height: 60rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  box-shadow: $shadow-product;
+
+  @include respond(mini-phone) {
+    display: none;
+  }
+
+  &__imagebox {
+    height: 50rem;
+    min-width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-img {
+      filter: &shadow-img;
+      z-index: 1;
+      height: 35rem;
+      width: 15rem;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &::after {
+      content: '';
+      transform: rotate(10deg);
+      position: absolute;
+      padding: 30rem 10rem;
+      clip-path: polygon(65% 0, 0 60%, 38% 53%, 20% 100%, 99% 40%, 59% 45%);
+      background: radial-gradient(
+        circle at 80%,
+        $color-secondary--light 0%,
+        $color-secondary 80%
+      );
+    }
+  }
+}
+
+.description {
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  height: 200rem;
+  overflow: hidden;
+
+  @include respond(tablet) {
+    height: 100rem;
+  }
+
+  @include respond(mini-phone) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  background: linear-gradient(
+    to right,
+    $color-shadow-light 0%,
+    $color-grey 50%,
+    $color-shadow-light 100%
+  );
+
+  &__imagewrapper {
+    @include respond(tablet) {
+      display: none;
+    }
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+  }
+
+  &__img {
+    width: 40rem;
+    position: absolute;
+    top: 15rem;
+    left: 15rem;
+  }
+
+  &__content {
+    &box {
+      z-index: 2;
+      padding: 0 5rem;
+
+      &--amino {
+        grid-column: 2;
+        grid-row: 1;
+        @include respond(mini-phone) {
+          grid-column: 1;
+          grid-row: 1;
+        }
+      }
+
+      &--energy {
+        grid-column: 1;
+        grid-row: 2;
+        @include respond(mini-phone) {
+          grid-column: 1;
+          grid-row: 2;
+        }
+      }
+
+      &--calorie {
+        grid-column: 2;
+        grid-row: 3;
+        @include respond(mini-phone) {
+          grid-column: 1;
+          grid-row: 3;
+        }
+      }
+
+      p {
+        padding-left: 0.5rem;
+      }
+    }
+
+    &-iconbox {
+      width: 7rem;
+      height: 7rem;
+      background-color: $color-secondary--light;
+      display: flex;
+      align-items: center;
+      border-radius: 20px;
+    }
+
+    &-icon {
+      &--amino {
+        display: block;
+        margin: auto;
+        width: 5rem;
+        height: 5rem;
+      }
+
+      &--energy {
+        display: block;
+        margin: auto;
+        width: 5rem;
+        height: 5rem;
+      }
+
+      &--calorie {
+        display: block;
+        margin: auto;
+        width: 7rem;
+        height: 7rem;
+      }
+    }
+  }
+}
+
+.faq {
+  background-color: $color-primary;
+  padding: 20rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond(mini-phone) {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__left {
+    width: 50%;
+  }
+
+  &__right {
+    width: 50%;
+  }
+
+  &__symbol {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &::before {
+      @include dot;
+    }
+  }
+}

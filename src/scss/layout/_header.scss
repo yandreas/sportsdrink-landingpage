@@ -1,0 +1,81 @@
+.header {
+  background-color: $color-primary--header;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7rem;
+  padding: 0.5rem 0 1rem 0;
+  filter: $shadow-header;
+
+  &__logo {
+    width: 30rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+
+    &-img {
+      height: 4rem;
+      width: 2rem;
+    }
+
+    &-text {
+      text-transform: uppercase;
+    }
+  }
+
+  &__account {
+    width: 30rem;
+    display: flex;
+    justify-content: flex-end;
+
+    &-link {
+      &:link,
+      &:visited {
+        display: block;
+        color: $color-white;
+        text-decoration: none;
+        padding: 0 1rem;
+      }
+    }
+  }
+
+  &__nav {
+    display: block;
+    background: linear-gradient(
+      to bottom,
+      $color-primary--light 30%,
+      $color-primary
+    );
+    border: 0.1rem solid $color-grey;
+    border-radius: 100px;
+
+    &list {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      margin: 0.3rem 0.3rem;
+
+      &-item {
+        display: block;
+      }
+
+      &-link {
+        &:link,
+        &:visited {
+          display: block;
+          padding: 0.5rem 2rem;
+          border-radius: 15px;
+          color: $color-white;
+          text-decoration: none;
+        }
+        &:hover,
+        &:active {
+          background-color: $color-secondary;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

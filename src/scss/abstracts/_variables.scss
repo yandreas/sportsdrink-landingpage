@@ -1,0 +1,37 @@
+//Colors
+$color-primary: #1c1e20;
+$color-primary--header: rgb(23, 27, 29);
+$color-primary--light: #3a3e42;
+$color-secondary: #159b73;
+$color-secondary--light: #21f06e;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-grey: #e0e0e0;
+$color-shadow-dark: #2e313594;
+$color-shadow-light: rgba(176, 166, 166, 0.555);
+$color-shadow-secondary: rgba(11, 247, 98, 0.329);
+
+//Shadow
+$shadow-header: drop-shadow(0 0 0.5rem $color-shadow-dark);
+$shadow-footer: drop-shadow(0 0 0.5rem $color-shadow-dark);
+$shadow-product: (inset 0 -15rem 10rem -10rem $color-shadow-secondary);
+$shadow-image: drop-shadow(0 0 0.5rem $color-shadow-light);
+//Margins
+
+$margin-sm: 2.5rem;
+
+//Animation
+$scroller-duration: 20s;
+
+//Breakpoints
+//1220px tablet
+$breakpoint-tablet: 76.25em;
+
+//1000px bigphone
+$breakpoint-big-phone: 62.5em;
+
+//780px phone
+$breakpoint-phone: 48.75em;
+
+//580px miniphone
+$breakpoint-mini-phone: 36.25em;
